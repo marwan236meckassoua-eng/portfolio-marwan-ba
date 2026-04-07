@@ -35,12 +35,12 @@ const COLORS = {
 };
 
 const LOGOS = {
-  jira: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg",
-  confluence: "https://upload.wikimedia.org/wikipedia/commons/0/01/Confluence_Logo.svg",
-  figma: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
-  powerbi: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
-  sql: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
-  spiratest: "https://www.inflectra.com/Images/Media-Kit/spiraTest-logo-no-bg.png"
+  jira: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jira.svg",
+  confluence: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/confluence.svg",
+  figma: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/figma.svg",
+  powerbi: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg",
+  sql: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg",
+  spiratest: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/inflectra.svg"
 };
 
 const projectsData = [
