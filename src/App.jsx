@@ -38,7 +38,7 @@ const LOGOS = {
   jira: "https://cdn.simpleicons.org/jira/0052CC",
   confluence: "https://cdn.simpleicons.org/confluence/0052CC",
   figma: "https://cdn.simpleicons.org/figma/F24E1E",
-  powerbi: "https://cdn.simpleicons.org/microsoftpowerbi/F2C811",
+  powerbi: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/logo-powerbi.svg",
   sql: "https://cdn.simpleicons.org/mysql/4479A1",
   spiratest: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/logo-spiratest.png"
 };
