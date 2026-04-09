@@ -466,19 +466,19 @@ export default function App() {
         </div>
       </section>
 
-      <section id="rgpd" className="py-16 sm:py-24 lg:py-32 bg-slate-900 border-y border-slate-800">
+    <section id="rgpd" className="py-16 sm:py-24 lg:py-32 bg-slate-900 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="mb-12">
             <p className="text-xs font-black text-blue-400 uppercase tracking-[0.5em] mb-4">— Sensibilité Réglementaire</p>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter">RGPD</h2>
             <p className="text-slate-400 font-medium text-base sm:text-lg mt-4 max-w-2xl leading-relaxed">
-              Contrainte identifiée et intégrée dès le cadrage du SI SportDeal — pas en fin de projet.
+              Contrainte identifiée et intégrée dès le cadrage du SI SportDeal.
             </p>
           </div>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mb-12">
             Le SI SportDeal collecte des données personnelles clients (noms, adresses, historiques de commandes). 
-            En tant que BA, j'ai intégré le RGPD (UE 2016/679) comme exigence non fonctionnelle dès la phase 
-            de cadrage Confluence — traduit en critères d'acceptance dans chaque User Story.
+            En tant que BA, j'ai identifié le RGPD (UE 2016/679) comme contrainte réglementaire à prendre en 
+            compte dans la conception du SI — intégrée dans la réflexion métier lors du cadrage du projet.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-12">
             <div className="p-6 sm:p-8 bg-slate-800 rounded-2xl border border-slate-700">
@@ -498,9 +498,8 @@ export default function App() {
             </div>
           </div>
           <div className="flex flex-wrap gap-4">
-            <span className="inline-flex items-center gap-2 bg-green-900/50 text-green-400 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-green-800">✅ Intégré dans les US-01 à US-06</span>
+            <span className="inline-flex items-center gap-2 bg-green-900/50 text-green-400 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-green-800">✅ Identifié dès le cadrage</span>
             <span className="inline-flex items-center gap-2 bg-blue-900/50 text-blue-400 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-blue-800">🔒 RGPD UE 2016/679</span>
-            <span className="inline-flex items-center gap-2 bg-slate-800 text-slate-400 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-slate-700">📋 Validé en recette SpiraTest</span>
           </div>
         </div>
       </section>
