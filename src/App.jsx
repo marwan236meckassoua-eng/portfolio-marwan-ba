@@ -345,13 +345,17 @@ export default function App() {
       <section className="pt-28 pb-10 px-5 sm:pt-40 sm:pb-24 sm:px-10 lg:pt-48 lg:pb-32 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 sm:gap-20 lg:gap-32">
         <div className="flex-1 space-y-12">
           <div className="flex flex-col gap-4">
-            <div className="inline-flex items-center gap-3 bg-blue-50 text-blue-700 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-blue-100 w-fit">
-              <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
-              Recherche Alternance Master 2 — Septembre 2026
-            </div>
-            <div className="inline-flex items-center gap-3 bg-slate-50 text-slate-600 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-slate-200 w-fit">
-              <span className="w-2.5 h-2.5 bg-slate-400 rounded-full"></span>
-              Sensibilité réglementaire : RGPD · RFE
+          <div className="inline-flex items-center gap-3 bg-blue-50 text-blue-700 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-blue-100 w-fit">
+  <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
+  Recherche Alternance Master 2 — Septembre 2026
+</div>
+<div className="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest w-fit">
+  📅 3j Entreprise / 2j École
+</div>
+<div className="inline-flex items-center gap-3 bg-slate-50 text-slate-600 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-slate-200 w-fit">
+  <span className="w-2.5 h-2.5 bg-slate-400 rounded-full"></span>
+  Sensibilité réglementaire : RGPD · RFE
+</div>
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase">
@@ -390,7 +394,9 @@ export default function App() {
         <div className="flex-1 flex flex-col gap-12 items-end">
           <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-[2rem] sm:rounded-[3.5rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-white z-20 transform hover:scale-105 hover:rotate-1 transition-all duration-700 bg-slate-100 self-center lg:self-end">
             <img src="https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/preview.webp" alt="Meckassoua Marwan" className="w-full h-full object-cover" crossOrigin="anonymous" />
-          </div>
+          </div><p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic mt-4">
+  Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes.
+</p>
           <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-slate-100 w-full grid grid-cols-2 gap-4 sm:gap-6">
             <div className="p-5 sm:p-7 lg:p-8 bg-slate-900 rounded-[1rem] sm:rounded-[2rem] lg:rounded-[3rem] text-center text-white shadow-inner">
               <p className="text-3xl sm:text-4xl lg:text-5xl font-black">04</p>
@@ -417,7 +423,9 @@ export default function App() {
           <div className="mb-10 sm:mb-16 lg:mb-24 space-y-4">
             <p className="text-xs font-black text-blue-600 uppercase tracking-[0.5em]">01 / DOSSIER DE PREUVES</p>
             <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-slate-900 uppercase tracking-tighter">4 Études de cas SI</h2>
-            <p className="text-slate-500 font-medium text-base sm:text-xl lg:text-2xl italic max-w-4xl leading-relaxed">Projet Fil Rouge : Transformation Digitale SportDeal (PME E-commerce)</p>
+          <p className="text-slate-500 font-medium text-base sm:text-xl lg:text-2xl italic max-w-4xl leading-relaxed">
+  J'ai conduit une étude de cas complète sur <span className="text-blue-600 font-bold">SportDeal</span>, une PME e-commerce en transformation digitale de son SI — du cadrage Agile aux tests QA, du prototypage UI à la solution décisionnelle Power BI.
+</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
             {projectsData.map((p) => {
@@ -691,9 +699,36 @@ export default function App() {
               </div>
             ))}
           </div>
-          <button onClick={goHome} className="flex items-center gap-4 sm:gap-6 mx-auto px-8 py-5 sm:px-16 sm:py-10 bg-white text-slate-900 rounded-[2rem] sm:rounded-[4rem] font-black uppercase text-sm sm:text-base tracking-widest hover:bg-blue-600 hover:text-white transition-all shadow-2xl active:scale-95 transform hover:scale-105">
-            Explorer les autres dossiers
-          </button>
+         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+  {projectsData.findIndex(p => p.id === project.id) > 0 && (
+    <button 
+      onClick={() => { 
+        const idx = projectsData.findIndex(p => p.id === project.id);
+        goProject(projectsData[idx - 1]); 
+      }} 
+      className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-white/10 border border-white/20 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl">
+      <ArrowLeft size={20} />
+      <div className="text-left">
+        <p className="text-[10px] opacity-60 mb-1">Projet précédent</p>
+        <p>{projectsData[projectsData.findIndex(p => p.id === project.id) - 1].title}</p>
+      </div>
+    </button>
+  )}
+  {projectsData.findIndex(p => p.id === project.id) < projectsData.length - 1 && (
+    <button 
+      onClick={() => { 
+        const idx = projectsData.findIndex(p => p.id === project.id);
+        goProject(projectsData[idx + 1]); 
+      }} 
+      className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-blue-600 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-blue-500 transition-all shadow-2xl">
+      <div className="text-right">
+        <p className="text-[10px] opacity-60 mb-1">Projet suivant</p>
+        <p>{projectsData[projectsData.findIndex(p => p.id === project.id) + 1].title}</p>
+      </div>
+      <ArrowUpRight size={20} />
+    </button>
+  )}
+</div>
         </div>
       </section>
     </div>
