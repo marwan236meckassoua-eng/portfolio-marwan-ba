@@ -1,30 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  BarChart3, 
-  CheckCircle2, 
-  Settings, 
-  FileText, 
-  Mail, 
-  ArrowLeft, 
-  Layout, 
-  ArrowUpRight, 
-  Verified, 
-  ClipboardCheck,
-  Building2, 
-  Rocket,
-  Boxes,
-  Monitor, 
-  X, 
-  Maximize2, 
-  Award, 
-  Rss, 
-  Watch, 
-  FlaskConical, 
-  Globe, 
-  Mic, 
-  ChevronRight, 
-  Zap, 
-  Trophy 
+  BarChart3, CheckCircle2, Settings, FileText, Mail, ArrowLeft, Layout, ArrowUpRight, Verified, ClipboardCheck,
+  Building2, Rocket, Boxes, Monitor, X, Maximize2, Award, Rss, Watch, FlaskConical, Globe, Mic, ChevronRight, Zap, Trophy 
 } from 'lucide-react';
 
 const COLORS = {
@@ -45,63 +22,49 @@ const LOGOS = {
 
 const projectsData = [
   {
-    id: 1,
-    num: '01',
-    title: "Cadrage & Gestion Agile",
-    sub: "JIRA & CONFLUENCE",
-    platformLogos: [LOGOS.jira, LOGOS.confluence],
-    color: 'blue',
-    icon: Settings,
+    id: 1, num: '01', title: "Cadrage & Gestion Agile", sub: "JIRA & CONFLUENCE",
+    platformLogos: [LOGOS.jira, LOGOS.confluence], color: 'blue', icon: Settings,
     tagline: "Alignement stratégique et priorisation du backlog — 6 User Stories documentées.",
     context: "SportDeal pilotait sa logistique via Excel. Cette étude de cas porte sur la phase de cadrage nécessaire à la migration vers un SI structuré sous méthodologie Agile Scrum.",
     mission: "Transformer les besoins métiers bruts en un backlog actionnable. J'ai animé le cadrage sur Confluence pour aligner les 3 parties prenantes clés (Logistique, Dev, Direction).",
     stats: [
-      { val: '6', label: 'User Stories' },
-      { val: '3', label: 'Stakeholders' },
-      { val: '8', label: 'Agents formés' },
-      { val: 'Agile', label: 'Méthodologie' }
+      { val: '6', label: 'User Stories' }, { val: '3', label: 'Stakeholders' },
+      { val: '8', label: 'Agents formés' }, { val: 'Agile', label: 'Méthodologie' }
     ],
     steps: [
       {
         title: "Note de cadrage — Confluence",
-        desc: "Rédaction de la note de cadrage pour aligner les 3 parties prenantes clés (Responsable Logistique, Dev Lead, Direction) sur les objectifs métier, le périmètre et le planning macro.",
+        desc: "Rédaction de la note de cadrage pour aligner les 3 parties prenantes clés sur les objectifs métier, le périmètre et le planning macro.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2019-24-45%20Note%20de%20cadrage%20%E2%80%93%20Outil%20suivi%20commandes%20SportDeal%20-%20Marwan%20Mk%20-%20Confluence.png",
         points: ["3 objectifs métier : centralisation, SAV -40%, alertes", "Périmètre : IN (suivi, reporting) / OUT (stocks, CRM)", "Alignement Direction, Logistique & Technique"]
       },
       {
         title: "Product Backlog — 6 User Stories",
-        desc: "Traduction des besoins des 8 agents logistiques en 6 User Stories (US) actionnables. Chaque ticket définit le 'Qui', le 'Quoi' et le 'Pourquoi'.",
+        desc: "Traduction des besoins des 8 agents logistiques en 6 User Stories actionnables.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2018-28-17%20SportDeal%20%E2%80%93%20Suivi%20Commandes%20-%20Tous%20les%20tickets%20-%20Jira.png",
-        points: [
-          "US-01 : Consulter liste commandes (Highest)",
-          "US-02 : Mettre à jour statut (Notif auto)",
-          "US-03 : Recherche multi-critères (Performance < 2s)",
-          "US-04 : Rapport hebdomadaire PDF/Excel",
-          "US-05 : Alertes automatiques de retard",
-          "US-06 : Historique SAV (12 mois glissants)"
-        ]
+        points: ["US-01 : Consulter liste commandes (Highest)", "US-02 : Mettre à jour statut (Notif auto)", "US-03 : Recherche multi-critères (Performance < 2s)", "US-04 : Rapport hebdomadaire PDF/Excel", "US-05 : Alertes automatiques de retard", "US-06 : Historique SAV (12 mois glissants)"]
       },
       {
         title: "Epic SCRUM-5 — Vision produit",
-        desc: "L'ensemble des 6 User Stories a été regroupé sous l'Epic SCRUM-5 'Outil de suivi des commandes logistiques', reliée directement à la documentation Confluence.",
+        desc: "L'ensemble des 6 User Stories regroupé sous l'Epic SCRUM-5, reliée directement à la documentation Confluence.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2018-18-07%20SCRUM-5%20Outil%20de%20suivi%20des%20commandes%20logistiques%20-%20Jira.png",
         points: ["1 Epic fédératrice", "Lien bidirectionnel Jira ↔ Confluence", "Pilotage par le Product Owner"]
       },
       {
         title: "Scrum Board animé — Sprint 1",
-        desc: "Lancement du premier sprint de 2 semaines. Animation du management visuel via le board à 5 colonnes pour piloter le flux de travail en temps réel.",
+        desc: "Lancement du premier sprint de 2 semaines. Animation du management visuel via le board à 5 colonnes.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2018-38-24%20SCRUM%20Sprint%200%20%E2%80%93%20SportDeal%20%E2%80%93%20Suivi%20Commandes%20%E2%80%93%20Tableau%20Scrum%20-%20Jira.png",
         points: ["Board 5 colonnes (To Do → Done)", "Simulation Sprint Planning", "Transparence totale SI"]
       },
       {
         title: "Détail User Story (US-01)",
-        desc: "Zoom sur la US-01 : 'En tant qu'agent, je veux consulter la liste des commandes'. Documentation exhaustive du besoin.",
+        desc: "Zoom sur la US-01 : 'En tant qu'agent, je veux consulter la liste des commandes'.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2018-12-49%20SportDeal%20%E2%80%93%20Suivi%20Commandes%20-%20Tous%20les%20tickets%20-%20Jira.png",
         points: ["Documentation fine du besoin", "Priorité critique (Highest)", "Lien direct avec l'Epic mère"]
       },
       {
         title: "Dashboard & Reporting Direction",
-        desc: "Suivi de l'avancement global via les rapports Jira (Burndown Chart). Communication transparente de la progression.",
+        desc: "Suivi de l'avancement global via les rapports Jira. Communication transparente de la progression.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2018-18-07%20SCRUM-5%20Outil%20de%20suivi%20des%20commandes%20logistiques%20-%20Jira.png",
         points: ["Suivi de la vélocité", "Dashboard de pilotage Jira", "Alignement stratégique maintenu"]
       }
@@ -109,44 +72,37 @@ const projectsData = [
     results: ["Backlog 100% structuré", "Documentation complète et traçable", "Sprint 1 livré en 2 semaines"]
   },
   {
-    id: 4,
-    num: '02',
-    title: "Gestion des Tests QA",
-    sub: "SPIRATEST",
-    platformLogos: [LOGOS.spiratest],
-    color: 'green',
-    icon: CheckCircle2,
+    id: 4, num: '02', title: "Gestion des Tests QA", sub: "SPIRATEST",
+    platformLogos: [LOGOS.spiratest], color: 'green', icon: CheckCircle2,
     tagline: "Certification du module logistique — Validation des 6 US du Projet 01.",
     context: "Pour sécuriser le déploiement de SportDeal, une phase de recette fonctionnelle valide que les User Stories définies au Projet 01 sont techniquement conformes.",
     mission: "Piloter la qualité logicielle (QA) via la création d'une matrice de traçabilité et l'exécution de tests certifiant le 'Go Live' du module.",
     stats: [
-      { val: '5', label: 'Exigences RQ' },
-      { val: '100%', label: 'Couverture' },
-      { val: 'Pass', label: 'Verdict' },
-      { val: 'QA', label: 'Certifiée' }
+      { val: '5', label: 'Exigences RQ' }, { val: '100%', label: 'Couverture' },
+      { val: 'Pass', label: 'Verdict' }, { val: 'QA', label: 'Certifiée' }
     ],
     steps: [
       {
         title: "5 Exigences fonctionnelles — Requirements",
-        desc: "Documentation des exigences fonctionnelles (Use Cases) dans SpiraTest, avec niveau de criticité métier correspondant directement au backlog Jira.",
+        desc: "Documentation des exigences fonctionnelles dans SpiraTest, avec niveau de criticité métier.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2020-27-22%20Exigences%20SpiraTest.png",
         points: ["RQ-789 Consulter commandes (Critical)", "Mapping exigences Jira ↔ SpiraTest", "Validation du périmètre par priorité"]
       },
       {
         title: "5 Cas de tests — Test Cases",
-        desc: "Création des cas de tests fonctionnels (TC-290 à TC-294) liés aux exigences. Chaque test définit les étapes de vérification et résultats attendus.",
+        desc: "Création des cas de tests fonctionnels (TC-290 à TC-294) liés aux exigences.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2020-32-49%20Cas%20de%20test%20SpiraTest.png",
         points: ["TC-290 Affichage commandes", "TC-293 Alerte de retard", "Statut : Prêt pour le test"]
       },
       {
         title: "Matrice de traçabilité — TC ↔ RQ",
-        desc: "Vérification du lien bidirectionnel entre le besoin métier et le test technique. Garantir que 100% du périmètre est couvert sans zone d'ombre.",
+        desc: "Vérification du lien bidirectionnel entre le besoin métier et le test technique.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/matrice-tracabilite-TC290.png",
         points: ["Couverture totale du backlog", "Lien Requirements ↔ Test Cases", "Zéro lacune technique identifiée"]
       },
       {
         title: "Exécution & Statut Réussi",
-        desc: "Lancement du test run TC-290 (Consultation des commandes). Documentation du résultat effectif pour valider la mise en production.",
+        desc: "Lancement du test run TC-290 (Consultation des commandes). Documentation du résultat effectif.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/Screenshot%202026-04-02%20at%2020-42-27%20Ex%C3%A9cution%20de%20cas%20de%20test%20SpiraTest.png",
         points: ["Verdict technique certifié", "PV de recette validé", "Module prêt pour production"]
       }
@@ -154,79 +110,57 @@ const projectsData = [
     results: ["Conformité SI 100% prouvée", "Risque Go-Live maîtrisé", "Certification Qualité Logicielle"]
   },
   {
-    id: 3,
-    num: '03',
-    title: "Design de Solution UI",
-    sub: "FIGMA",
-    platformLogos: [LOGOS.figma],
-    color: 'orange',
-    icon: Layout,
+    id: 3, num: '03', title: "Design de Solution UI", sub: "FIGMA",
+    platformLogos: [LOGOS.figma], color: 'orange', icon: Layout,
     tagline: "Interface de pilotage interactive — Design orienté Action et référentiel pour la QA.",
     context: "Le projet SportDeal nécessite une interface capable de centraliser le pilotage. Ce prototype est le pont entre le cadrage et le développement.",
     mission: "Concevoir le prototype haute fidélité et le Design System pour valider l'UX et servir de référentiel visuel pour les tests SpiraTest.",
     stats: [
-      { val: 'UX', label: 'Orienté Action' },
-      { val: 'System', label: 'Design complet' },
-      { val: 'QA', label: 'Référentiel' },
-      { val: 'SI', label: 'Scalable' }
+      { val: 'UX', label: 'Orienté Action' }, { val: 'System', label: 'Design complet' },
+      { val: 'QA', label: 'Référentiel' }, { val: 'SI', label: 'Scalable' }
     ],
     steps: [
       {
         title: "Workspace & Design System Industriel",
-        desc: "Structuration du projet via un Design System (Auto-layout, composants réutilisables) pour assurer la cohérence et la rapidité de maintenance SI.",
+        desc: "Structuration du projet via un Design System pour assurer la cohérence et la rapidité de maintenance SI.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/figma-workspace.png",
-        points: [
-          "Librairie de composants (Cards, Badges)", 
-          "Réduction de l'ambiguïté technique pour les développeurs", 
-          "Référentiel visuel pour la QA"
-        ]
+        points: ["Librairie de composants (Cards, Badges)", "Réduction de l'ambiguïté technique pour les développeurs", "Référentiel visuel pour la QA"]
       },
       {
         title: "Tableau de Bord Stratégique",
-        desc: "Centralisation des indicateurs clés (KPI) : Clients, Commandes et CA. Lecture instantanée de la santé du SI.",
+        desc: "Centralisation des indicateurs clés (KPI) : Clients, Commandes et CA.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/dashboard-sportdeal.png",
-        points: [
-          "KPIs alignés sur le cahier des charges SportDeal",
-          "Cohérence des données avec le rapport Power BI (154,36M€)",
-          "Maquette validée comme référentiel de recette QA"
-        ]
+        points: ["KPIs alignés sur le cahier des charges SportDeal", "Cohérence des données avec le rapport Power BI (154,36M€)", "Maquette validée comme référentiel de recette QA"]
       }
     ],
     results: ["Validation MVP par Stakeholders", "Livrable de conception finalisé", "Réduction de l'ambiguïté technique"]
   },
   {
-    id: 2,
-    num: '04',
-    title: "Solution de Reporting",
-    sub: "POWER BI",
-    platformLogos: [LOGOS.powerbi],
-    color: 'amber',
-    icon: BarChart3,
+    id: 2, num: '04', title: "Solution de Reporting", sub: "POWER BI",
+    platformLogos: [LOGOS.powerbi], color: 'amber', icon: BarChart3,
     tagline: "Cockpit décisionnel — Analyse de performance de 154M€ via Root Cause Analysis.",
     context: "Suite à une baisse de CA de -7,6% en 2019, SportDeal devait identifier l'origine du déclin via une analyse granulaire des données commerciales.",
     mission: "Transformer 3 ans d'historique en un cockpit décisionnel. Pilotage de l'ETL, modélisation en étoile et conception d'un outil de 'Root Cause Analysis'.",
     stats: [
-      { val: '154M€', label: 'CA Analysé' },
-      { val: '8', label: 'Visuels clés' },
-      { val: '-7,6%', label: 'Baisse CA' },
-      { val: '3', label: 'Ans Data' }
+      { val: '154M€', label: 'CA Analysé' }, { val: '8', label: 'Visuels clés' },
+      { val: '-7,6%', label: 'Baisse CA' }, { val: '3', label: 'Ans Data' }
     ],
     steps: [
       {
         title: "Tableau de Bord Interactif",
-        desc: "Démonstration du dashboard dynamique permettant d'explorer les indicateurs par région et canal en temps réel.",
+        desc: "Dashboard dynamique permettant d'explorer les indicateurs par région et canal en temps réel.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/ProjetPowerBI2026-04-0319-50-51-ezgif.com-resize.gif",
         points: ["Navigation dynamique", "Filtres interactifs", "Aperçu temps réel"]
       },
       {
         title: "Dashboard Suivi des Ventes",
-        desc: "Conception d'une vue matricielle regroupant CA, Marges et Délais pour une lecture instantanée de la santé commerciale.",
+        desc: "Vue matricielle regroupant CA, Marges et Délais pour une lecture instantanée de la santé commerciale.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/jj.PNG",
         points: ["Calcul de KPIs en DAX", "Segmentation par canal", "Cartographie dynamique"]
       },
       {
         title: "Root Cause via Arbre IA",
-        desc: "Isoler les facteurs de baisse fin 2019 via l'arbre de décomposition temporelle pour identifier les causes racines de la chute du CA.",
+        desc: "Isoler les facteurs de baisse fin 2019 via l'arbre de décomposition temporelle.",
         img: "https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/s2.PNG",
         points: ["Analyse drill-down", "Focus Q4 2019", "Aide à la décision IA"]
       }
@@ -236,55 +170,16 @@ const projectsData = [
 ];
 
 const experiences = [
-  { 
-    title: 'Étude BI — Commerces de proximité', 
-    period: 'Fév – Juil 2025', 
-    desc: 'Modélisation de données et conception d\'un prototype de tableau de bord interactif sous Power BI pour optimiser la prise de décision stratégique.',
-    metrics: '8 KPIs définis · Cadrage et stratégie pilotés en autonomie · Dashboard publié sur Power BI Service.'
-  },
-  { 
-    title: 'Diagnostic organisationnel — UPEC', 
-    period: 'Mars – Avr 2025', 
-    desc: 'Analyse des résistances au changement et élaboration d\'une stratégie de digitalisation pour un système d\'apprentissage en ligne.',
-    metrics: 'Plan de refonte des processus · Cartographie des parties prenantes · Livrables : note de cadrage + roadmap.'
-  },
-  { 
-    title: 'Agent logistique — Intermarché Erbrée', 
-    period: 'Déc 2022 – Jan 2026', 
-    desc: 'Optimisation de la fluidité de la chaîne logistique automatisée et gestion de la traçabilité des produits via scanners en environnement haute cadence.',
-    metrics: '~400 colis/jour · Missions saisonnières récurrentes · Respect strict des objectifs de productivité et qualité.'
-  },
-  { 
-    title: 'Accompagnement pédagogique — HappySitters', 
-    period: 'Sept 2024 – Avr 2025', 
-    desc: 'Analyse des besoins individuels, élaboration de plans d\'action personnalisés et reporting régulier aux parties prenantes.',
-    metrics: 'Gestion autonome du planning · Suivi structuré de la progression · Relation client directe.'
-  },
+  { title: 'Étude BI — Commerces de proximité', period: 'Fév – Juil 2025', desc: 'Modélisation de données et conception d\'un prototype de tableau de bord interactif sous Power BI pour optimiser la prise de décision stratégique.', metrics: '8 KPIs définis · Cadrage et stratégie pilotés en autonomie · Dashboard publié sur Power BI Service.' },
+  { title: 'Diagnostic organisationnel — UPEC', period: 'Mars – Avr 2025', desc: 'Analyse des résistances au changement et élaboration d\'une stratégie de digitalisation pour un système d\'apprentissage en ligne.', metrics: 'Plan de refonte des processus · Cartographie des parties prenantes · Livrables : note de cadrage + roadmap.' },
+  { title: 'Agent logistique — Intermarché Erbrée', period: 'Déc 2022 – Jan 2026', desc: 'Optimisation de la fluidité de la chaîne logistique automatisée et gestion de la traçabilité des produits via scanners en environnement haute cadence.', metrics: '~400 colis/jour · Missions saisonnières récurrentes · Respect strict des objectifs de productivité et qualité.' },
+  { title: 'Accompagnement pédagogique — HappySitters', period: 'Sept 2024 – Avr 2025', desc: 'Analyse des besoins individuels, élaboration de plans d\'action personnalisés et reporting régulier aux parties prenantes.', metrics: 'Gestion autonome du planning · Suivi structuré de la progression · Relation client directe.' },
 ];
 
 const formation = [
-  { 
-    year: '2026–2027', 
-    title: 'Master 2 Management & Transformation Digitale', 
-    school: 'Faculté AEI — Université Paris XII (UPEC)', 
-    note: 'Alternance Recherchée (Sept. 2026)', 
-    highlight: true,
-    subjects: ['Pilotage de la Transformation Digitale', 'Conduite du changement']
-  },
-  { 
-    year: '2025–2026', 
-    title: 'Master 1 Management & Transformation Digitale', 
-    school: 'Faculté AEI — Université Paris XII (UPEC)', 
-    note: 'En cours',
-    subjects: ['Pilotage de projets SI', 'Méthodologies Agiles', 'Business Intelligence', 'Design UI/UX', 'Analyse de données', 'Sensibilité RGPD']
-  },
-  { 
-    year: '2022–2025', 
-    title: 'Licence Droit Économie Gestion', 
-    school: 'Faculté AEI — Université Paris XII (UPEC)', 
-    note: 'Parcours AGE — Mention',
-    subjects: ['Management des SI', 'Comptabilité de gestion', 'Contrôle de gestion', 'Droit des affaires', 'Analyse financière', 'Marketing']
-  }
+  { year: '2026–2027', title: 'Master 2 Management & Transformation Digitale', school: 'Faculté AEI — Université Paris XII (UPEC)', note: 'Alternance Recherchée (Sept. 2026)', highlight: true, subjects: ['Pilotage de la Transformation Digitale', 'Conduite du changement'] },
+  { year: '2025–2026', title: 'Master 1 Management & Transformation Digitale', school: 'Faculté AEI — Université Paris XII (UPEC)', note: 'En cours', subjects: ['Pilotage de projets SI', 'Méthodologies Agiles', 'Business Intelligence', 'Design UI/UX', 'Analyse de données', 'Sensibilité RGPD'] },
+  { year: '2022–2025', title: 'Licence Droit Économie Gestion', school: 'Faculté AEI — Université Paris XII (UPEC)', note: 'Parcours AGE — Mention', subjects: ['Management des SI', 'Comptabilité de gestion', 'Contrôle de gestion', 'Droit des affaires', 'Analyse financière', 'Marketing'] }
 ];
 
 const interests = [
@@ -345,17 +240,16 @@ export default function App() {
       <section className="pt-28 pb-10 px-5 sm:pt-40 sm:pb-24 sm:px-10 lg:pt-48 lg:pb-32 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 sm:gap-20 lg:gap-32">
         <div className="flex-1 space-y-12">
           <div className="flex flex-col gap-4">
-          <div className="inline-flex items-center gap-3 bg-blue-50 text-blue-700 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-blue-100 w-fit">
-  <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
-  Recherche Alternance Master 2 — Septembre 2026
-</div>
-<div className="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest w-fit">
-  📅 3j Entreprise / 2j École
-</div>
-<div className="inline-flex items-center gap-3 bg-slate-50 text-slate-600 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-slate-200 w-fit">
-  <span className="w-2.5 h-2.5 bg-slate-400 rounded-full"></span>
-  Sensibilité réglementaire : RGPD · RFE
-</div>
+            <div className="inline-flex items-center gap-3 bg-blue-50 text-blue-700 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-blue-100 w-fit">
+              <span className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-ping"></span>
+              Recherche Alternance Master 2 — Septembre 2026
+            </div>
+            <div className="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest w-fit">
+              📅 3j Entreprise / 2j École
+            </div>
+            <div className="inline-flex items-center gap-3 bg-slate-50 text-slate-600 px-6 py-3 rounded-full text-[11px] font-black uppercase tracking-widest border border-slate-200 w-fit">
+              <span className="w-2.5 h-2.5 bg-slate-400 rounded-full"></span>
+              Sensibilité réglementaire : RGPD · RFE
             </div>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase">
@@ -366,7 +260,7 @@ export default function App() {
           <div className="space-y-6">
             <p className="text-base sm:text-xl lg:text-2xl text-slate-900 font-black uppercase tracking-tight">Master Management et Transformation Digitale</p>
             <p className="text-sm sm:text-lg lg:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
-              Actuellement en <span className="text-blue-600 font-bold">Master 1</span> à l'UPEC, je prépare mon année de <span className="text-slate-900 font-bold">M2 en alternance</span>. Voici mon dossier de preuves techniques.
+              Actuellement en <span className="text-blue-600 font-bold">Master 1</span> à l'UPEC, je prépare mon année de <span className="text-slate-900 font-bold">M2 en alternance</span>.
             </p>
           </div>
           <div className="flex flex-col gap-10">
@@ -376,9 +270,7 @@ export default function App() {
               </a>
             </div>
             <div className="pt-8 flex flex-col gap-6">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 border-l-4 border-blue-600 pl-5">
-                Outils & Méthodologies (Études de cas)
-              </p>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 border-l-4 border-blue-600 pl-5">Outils & Méthodologies (Études de cas)</p>
               <div className="flex flex-wrap gap-8 items-center">
                 <img src={LOGOS.jira} className="h-7 w-auto opacity-70 hover:opacity-100 transition-all" alt="Jira" />
                 <img src={LOGOS.confluence} className="h-7 w-auto opacity-70 hover:opacity-100 transition-all" alt="Confluence" />
@@ -390,12 +282,12 @@ export default function App() {
             </div>
           </div>
         </div>
-        
-        <div className="flex-1 flex flex-col gap-12 items-end">
+
+        <div className="flex-1 flex flex-col gap-6 items-end">
           <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-[2rem] sm:rounded-[3.5rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-white z-20 transform hover:scale-105 hover:rotate-1 transition-all duration-700 bg-slate-100 self-center lg:self-end">
             <img src="https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/preview.webp" alt="Meckassoua Marwan" className="w-full h-full object-cover" crossOrigin="anonymous" />
-         </div>
-          <p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic mt-4">
+          </div>
+          <p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic">
             Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes.
           </p>
           <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-slate-100 w-full grid grid-cols-2 gap-4 sm:gap-6">
@@ -424,9 +316,9 @@ export default function App() {
           <div className="mb-10 sm:mb-16 lg:mb-24 space-y-4">
             <p className="text-xs font-black text-blue-600 uppercase tracking-[0.5em]">01 / DOSSIER DE PREUVES</p>
             <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-slate-900 uppercase tracking-tighter">4 Études de cas SI</h2>
-          <p className="text-slate-500 font-medium text-base sm:text-xl lg:text-2xl italic max-w-4xl leading-relaxed">
-  J'ai conduit une étude de cas complète sur <span className="text-blue-600 font-bold">SportDeal</span>, une PME e-commerce en transformation digitale de son SI — du cadrage Agile aux tests QA, du prototypage UI à la solution décisionnelle Power BI.
-</p>
+            <p className="text-slate-500 font-medium text-base sm:text-xl lg:text-2xl italic max-w-4xl leading-relaxed">
+              J'ai conduit une étude de cas complète sur <span className="text-blue-600 font-bold">SportDeal</span>, une PME e-commerce en transformation digitale de son SI — du cadrage Agile aux tests QA, du prototypage UI à la solution décisionnelle Power BI.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
             {projectsData.map((p) => {
@@ -475,19 +367,15 @@ export default function App() {
         </div>
       </section>
 
-    <section id="rgpd" className="py-16 sm:py-24 lg:py-32 bg-slate-900 border-y border-slate-800">
+      <section id="rgpd" className="py-16 sm:py-24 lg:py-32 bg-slate-900 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="mb-12">
             <p className="text-xs font-black text-blue-400 uppercase tracking-[0.5em] mb-4">— Sensibilité Réglementaire</p>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter">RGPD</h2>
-            <p className="text-slate-400 font-medium text-base sm:text-lg mt-4 max-w-2xl leading-relaxed">
-              Contrainte identifiée et intégrée dès le cadrage du SI SportDeal.
-            </p>
+            <p className="text-slate-400 font-medium text-base sm:text-lg mt-4 max-w-2xl leading-relaxed">Contrainte identifiée et intégrée dès le cadrage du SI SportDeal.</p>
           </div>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mb-12">
-            Le SI SportDeal collecte des données personnelles clients (noms, adresses, historiques de commandes). 
-            En tant que BA, j'ai identifié le RGPD (UE 2016/679) comme contrainte réglementaire à prendre en 
-            compte dans la conception du SI — intégrée dans la réflexion métier lors du cadrage du projet.
+            Le SI SportDeal collecte des données personnelles clients (noms, adresses, historiques de commandes). En tant que BA, j'ai identifié le RGPD (UE 2016/679) comme contrainte réglementaire à prendre en compte dans la conception du SI — intégrée dans la réflexion métier lors du cadrage du projet.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-12">
             <div className="p-6 sm:p-8 bg-slate-800 rounded-2xl border border-slate-700">
@@ -700,36 +588,36 @@ export default function App() {
               </div>
             ))}
           </div>
-         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-  {projectsData.findIndex(p => p.id === project.id) > 0 && (
-    <button 
-      onClick={() => { 
-        const idx = projectsData.findIndex(p => p.id === project.id);
-        goProject(projectsData[idx - 1]); 
-      }} 
-      className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-white/10 border border-white/20 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl">
-      <ArrowLeft size={20} />
-      <div className="text-left">
-        <p className="text-[10px] opacity-60 mb-1">Projet précédent</p>
-        <p>{projectsData[projectsData.findIndex(p => p.id === project.id) - 1].title}</p>
-      </div>
-    </button>
-  )}
-  {projectsData.findIndex(p => p.id === project.id) < projectsData.length - 1 && (
-    <button 
-      onClick={() => { 
-        const idx = projectsData.findIndex(p => p.id === project.id);
-        goProject(projectsData[idx + 1]); 
-      }} 
-      className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-blue-600 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-blue-500 transition-all shadow-2xl">
-      <div className="text-right">
-        <p className="text-[10px] opacity-60 mb-1">Projet suivant</p>
-        <p>{projectsData[projectsData.findIndex(p => p.id === project.id) + 1].title}</p>
-      </div>
-      <ArrowUpRight size={20} />
-    </button>
-  )}
-</div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            {projectsData.findIndex(p => p.id === project.id) > 0 && (
+              <button
+                onClick={() => {
+                  const idx = projectsData.findIndex(p => p.id === project.id);
+                  goProject(projectsData[idx - 1]);
+                }}
+                className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-white/10 border border-white/20 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl">
+                <ArrowLeft size={20} />
+                <div className="text-left">
+                  <p className="text-[10px] opacity-60 mb-1">Projet précédent</p>
+                  <p>{projectsData[projectsData.findIndex(p => p.id === project.id) - 1].title}</p>
+                </div>
+              </button>
+            )}
+            {projectsData.findIndex(p => p.id === project.id) < projectsData.length - 1 && (
+              <button
+                onClick={() => {
+                  const idx = projectsData.findIndex(p => p.id === project.id);
+                  goProject(projectsData[idx + 1]);
+                }}
+                className="flex items-center gap-4 px-8 py-5 sm:px-12 sm:py-8 bg-blue-600 text-white rounded-[2rem] font-black uppercase text-sm tracking-widest hover:bg-blue-500 transition-all shadow-2xl">
+                <div className="text-right">
+                  <p className="text-[10px] opacity-60 mb-1">Projet suivant</p>
+                  <p>{projectsData[projectsData.findIndex(p => p.id === project.id) + 1].title}</p>
+                </div>
+                <ArrowUpRight size={20} />
+              </button>
+            )}
+          </div>
         </div>
       </section>
     </div>
