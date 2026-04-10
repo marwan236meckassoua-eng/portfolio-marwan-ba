@@ -394,9 +394,10 @@ export default function App() {
         <div className="flex-1 flex flex-col gap-12 items-end">
           <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-[2rem] sm:rounded-[3.5rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-white z-20 transform hover:scale-105 hover:rotate-1 transition-all duration-700 bg-slate-100 self-center lg:self-end">
             <img src="https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/preview.webp" alt="Meckassoua Marwan" className="w-full h-full object-cover" crossOrigin="anonymous" />
-          </div><p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic mt-4">
-  Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes.
-</p>
+         </div>
+          <p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic mt-4">
+            Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes.
+          </p>
           <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-slate-100 w-full grid grid-cols-2 gap-4 sm:gap-6">
             <div className="p-5 sm:p-7 lg:p-8 bg-slate-900 rounded-[1rem] sm:rounded-[2rem] lg:rounded-[3rem] text-center text-white shadow-inner">
               <p className="text-3xl sm:text-4xl lg:text-5xl font-black">04</p>
