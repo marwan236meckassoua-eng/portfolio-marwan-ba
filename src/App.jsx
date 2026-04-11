@@ -219,7 +219,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
-  const goProject = (p) => { setProject(p); setView('detail'); window.scrollTo(0, 0); };
+  const goProject = (p) => { setProject(p); setView('detail'); setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50); };
   const goHome = () => { setView('home'); window.scrollTo(0, 0); };
 
   const Lightbox = () => zoomImg ? (
@@ -260,7 +260,7 @@ export default function App() {
           <div className="space-y-6">
             <p className="text-base sm:text-xl lg:text-2xl text-slate-900 font-black uppercase tracking-tight">Master Management et Transformation Digitale</p>
             <p className="text-sm sm:text-lg lg:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
-              Actuellement en <span className="text-blue-600 font-bold">Master 1</span> à l'UPEC, je prépare mon année de <span className="text-slate-900 font-bold">M2 en alternance</span>.
+              Actuellement en <span className="text-blue-600 font-bold">Master 1</span> à Paris XII, je prépare mon année de <span className="text-slate-900 font-bold">M2 en alternance</span>.
             </p>
           </div>
           <div className="flex flex-col gap-10">
@@ -270,7 +270,7 @@ export default function App() {
               </a>
             </div>
             <div className="pt-8 flex flex-col gap-6">
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 border-l-4 border-blue-600 pl-5">Outils & Méthodologies (Études de cas)</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 border-l-4 border-blue-600 pl-5">Outils & Méthodologies </p>
               <div className="flex flex-wrap gap-8 items-center">
                 <img src={LOGOS.jira} className="h-7 w-auto opacity-70 hover:opacity-100 transition-all" alt="Jira" />
                 <img src={LOGOS.confluence} className="h-7 w-auto opacity-70 hover:opacity-100 transition-all" alt="Confluence" />
@@ -288,7 +288,7 @@ export default function App() {
             <img src="https://raw.githubusercontent.com/marwan236meckassoua-eng/portfolio-assets/main/preview.webp" alt="Meckassoua Marwan" className="w-full h-full object-cover" crossOrigin="anonymous" />
           </div>
           <p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed text-center lg:text-right max-w-xs self-center lg:self-end italic">
-            Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes.
+            « Méthodique et orienté utilisateur, je suis passionné par l'optimisation des processus et la transformation de données brutes en décisions concrètes. »
           </p>
           <div className="bg-white p-5 sm:p-8 lg:p-10 rounded-[1.5rem] sm:rounded-[3rem] lg:rounded-[4rem] shadow-2xl border border-slate-100 w-full grid grid-cols-2 gap-4 sm:gap-6">
             <div className="p-5 sm:p-7 lg:p-8 bg-slate-900 rounded-[1rem] sm:rounded-[2rem] lg:rounded-[3rem] text-center text-white shadow-inner">
